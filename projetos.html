@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">    
+    <script src="main.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="quarto1.jpg" type="icon">
+    
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Projeto PW I</title>
+</head>
+<style>
+  .projects {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+}
+
+.projects:hover {
+  transform: scale(1.01); 
+}
+
+.projects__title {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: #181818;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #181818;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.project {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #f7f1eb;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project:hover {
+  background-color: #e6d2b4;
+  transform: translateY(-8px);
+}
+
+.project::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.project:hover::before {
+  opacity: 1;
+}
+
+.project__heading {
+  font-size: 2.2rem;
+  color: #181818;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project__description {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.project__description::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2c3855;
+  margin-top: 1rem;
+  border-radius: 2px;
+  transition: width 0.4s;
+}
+
+.project:hover .project__description::after {
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .projects__title {
+    font-size: 2.5rem;
+  }
+
+  .project__heading {
+    font-size: 1.8rem;
+  }
+
+  .project__description {
+    font-size: 1rem;
+  }
+}
+
+* CSS para a Galeria */
+.photo-gallery {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery__title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2c3855;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery__item {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery__item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery__item:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .projects__title, .gallery__title {
+    font-size: 2.2rem;
+  }
+
+  .project__heading {
+    font-size: 1.8rem;
+  }
+
+  .project__description {
+    font-size: 1rem;
+  }
+}
+
+
+</style>
+<body>
+    <!--=============== HEADER ===============-->
+    <nav class="nav" id="nav"> 
+      <a href="index.html" class="nav__logo">
+       The Hotel
+      </a>
+    <ul class="nav__list">
+
+      <li class="nav__item">
+        <a href="index.html" class="nav__link active-link">Início</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="produtos.html" class="nav__link">Quartos</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="projetos.html" class="nav__link">Projetos</a>
+      </li>
+
+      <li class="nav__item">
+          <a href="contato.html" class="nav__link">Contato</a>
+      </li>
+
+      <li class="nav__item">
+          <a href="sobrenos.html" class="nav__link">Sobre Nós</a>
+      </li>
+      <li class="nav__item">
+        <a href="login.html" class="nav__link">
+          <i class='bx bx-user-circle nav__link_icon'></i>
+        </a>
+      </li>
+      
+      <li class="nav__item">
+        <i class='bx bx-cart-alt nav__link_icon'></i> 
+        <span class="cart__badge">3</span>  
+      </li>
+      
+    </ul>     
+  </div>
+  </nav>
+
+
+    <section class="projects">
+      <h1 class="projects__title">Projetos do Hotel</h1>
+      
+      <div class="project">
+        <h2 class="project__heading">Reformas Recentes e Expansões</h2>
+        <p class="project__description">Detalhes sobre melhorias nos quartos e nas áreas comuns do hotel para proporcionar mais conforto e modernidade.</p>
+      </div>
+  
+      <div class="project">
+        <h2 class="project__heading">Iniciativas Sustentáveis</h2>
+        <p class="project__description">Projetos ecológicos, como instalação de painéis solares, programas de reciclagem e jardins para um ambiente mais sustentável.</p>
+      </div>
+  
+      <div class="project">
+        <h2 class="project__heading">Inovações Tecnológicas</h2>
+        <p class="project__description">Soluções de smart hotel, incluindo check-in automatizado e controle inteligente de quartos.</p>
+      </div>
+  
+      <div class="project">
+        <h2 class="project__heading">Parcerias e Colaborações</h2>
+        <p class="project__description">Trabalhos com renomados designers e a comunidade local para oferecer uma experiência autêntica e moderna.</p>
+      </div>
+  
+      <div class="project">
+        <h2 class="project__heading">Projetos Futuramente Planejados</h2>
+        <p class="project__description">Expansão das instalações, novos restaurantes e áreas externas mais agradáveis para os hóspedes.</p>
+      </div>
+
+      <section class="projects__img">
+        <h2 class="projects__title">Projetos Concluídos</h2>
+        <div class="project">
+          <h3 class="project__heading">Reforma da Suíte Presidencial</h3>
+          <p class="project__description">Uma reforma de luxo com novos designs de interiores e tecnologia de ponta.</p>
+        </div>
+        <div class="project">
+          <h3 class="project__heading">Piscina Infinity</h3>
+          <p class="project__description">Adicionada uma piscina de borda infinita com vista para o mar.</p>
+        </div>
+      
+        <!-- Aba de Fotos -->
+        <section class="photo-gallery">
+          <h2 class="gallery__title">Galeria de Projetos</h2>
+          <div class="gallery__grid">
+            <div class="gallery__item">
+              <img src="assets/img/room-1.jpg" alt="Projeto 1">
+            </div>
+            <div class="gallery__item">
+              <img src="assets/img/quarto1.jpg" alt="Projeto 2">
+            </div>
+            <div class="gallery__item">
+              <img src="assets/img/room-1.jpg" alt="Projeto 3">
+            </div>
+            <div class="gallery__item">
+              <img src="assets/img/quarto1.jpg" alt="Projeto 4">
+            </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+    </section>
+      <!--=============== FOOTER ===============-->
+  
+    <footer>
+            <div class="container">
+            <div class="aboutus" >
+              <h2>the hotel</h2>
+              <br>
+              <p>intro sobre o hotel oara colocar no footer e bla bla pq isto é o trabalho da cadeira ez</p>
+              <ul class="sci" >
+                <li>
+                  <a href="#"><i class='bx bxl-instagram'></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class='bx bxl-youtube'></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class='bx bxl-discord-alt'></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="sec quicklinks">
+              <h2>Suporte</h2>
+              <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="@">Ajuda</a></li>
+                <li><a href="@">Duvidas</a></li>
+              </ul>
+            </div>
+            <div class="sec quicklinks">
+              <h2>Politica</h2>
+              <ul>
+              <li><a href="politica.html">Privacy Politcs</a></li>  
+              </ul>
+            </div>
+            <div class="sec contact">
+              <h2>Contacto</h2>
+              <ul class="info">
+                <li>
+                  <span>
+                    <i class='bx bxs-phone'></i>
+                  </span>
+                  <p>
+                    <a href="€">
+                      +351 981 239 235
+                    </a>
+                  </p>
+                </li>
+                <li>
+                <span>
+                  <i class='bx bx-envelope'></i>
+                </span>
+                <p>
+                  <a href="gmail.com">
+                    thehotel@gmail.com
+                  </a>
+                </p>
+              </li>  
+              </ul>
+            </div>
+            </div>
+  </footer>
+
+<div class="copyright">
+<p>Copyright ©2024 THE HOTEL. All Rights Reserved. </p>
+</div>
+</body>
+</html>

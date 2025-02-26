@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">    
+    <script src="main.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="quarto1.jpg" type="icon">
+    
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Projeto PW I</title>
+</head>
+<style>
+  
+  .faq-section {
+  max-width: 95%;
+  margin: 4rem auto;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-section:hover {
+  transform: translateY(-5px); /* Eleva ligeiramente ao passar o mouse */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #181818;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #181818;
+  padding-bottom: 0.5rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #181818;
+  color: #cdcdcd;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background-color: #3d4b6a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  padding: 0 1rem;
+  color: #555;
+}
+
+.faq-answer p {
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+/* Estilo da resposta expandida */
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Defina um valor adequado */
+  opacity: 1;
+}
+
+/* Efeito do ícone de expansão */
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+</style>
+<body>
+    <!--=============== HEADER ===============-->
+    <nav class="nav" id="nav"> 
+      <a href="index.html" class="nav__logo">
+       The Hotel
+      </a>
+    <ul class="nav__list">
+
+      <li class="nav__item">
+        <a href="index.html" class="nav__link active-link">Início</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="produtos.html" class="nav__link">Quartos</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="projetos.html" class="nav__link">Projetos</a>
+      </li>
+
+      <li class="nav__item">
+          <a href="contato.html" class="nav__link">Contato</a>
+      </li>
+
+      <li class="nav__item">
+          <a href="sobrenos.html" class="nav__link">Sobre Nós</a>
+      </li>
+      <li class="nav__item">
+        <a href="login.html" class="nav__link">
+          <i class='bx bx-user-circle nav__link_icon'></i>
+        </a>
+      </li>
+      
+      <li class="nav__item">
+        <i class='bx bx-cart-alt nav__link_icon'></i> 
+        <span class="cart__badge">3</span>  
+      </li>
+      
+    </ul>     
+  </div>
+  </nav>
+
+    <section class="faq-section">
+      <h1 class="faq-title">FAQ</h1>
+  
+      <div class="faq-item">
+        <button class="faq-question">Quais são os horários de check-in e check-out?</button>
+        <div class="faq-answer">
+          <p>O check-in começa às 14h e o check-out deve ser feito até às 12h. Para check-in antecipado ou check-out tardio, consulte nossa recepção.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">O hotel oferece transporte para o aeroporto?</button>
+        <div class="faq-answer">
+          <p>Sim, oferecemos transporte para o aeroporto por um custo adicional. Entre em contato com a recepção para agendar seu transporte.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">Vocês aceitam animais de estimação?</button>
+        <div class="faq-answer">
+          <p>Sim, nosso hotel é pet-friendly. É permitido trazer animais de pequeno porte, mediante taxa adicional.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">Quais são as políticas de cancelamento?</button>
+        <div class="faq-answer">
+          <p>Cancelamentos até 48 horas antes do check-in são gratuitos. Cancelamentos posteriores poderão incorrer em taxas.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <button class="faq-question">O café da manhã está incluído na diária?</button>
+        <div class="faq-answer">
+          <p>Sim, o café da manhã está incluído na maioria dos pacotes. Verifique as condições de sua reserva para mais detalhes.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+      <div class="aboutus" >
+        <h2>the hotel</h2>
+        <br>
+        <p>intro sobre o hotel oara colocar no footer e bla bla pq isto é o trabalho da cadeira ez</p>
+        <ul class="sci" >
+          <li>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+          </li>
+          <li>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+          </li>
+          <li>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+          </li>
+          <li>
+            <a href="#"><i class='bx bxl-discord-alt'></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="sec quicklinks">
+        <h2>Suporte</h2>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="@">Ajuda</a></li>
+          <li><a href="@">Duvidas</a></li>
+        </ul>
+      </div>
+      <div class="sec quicklinks">
+        <h2>Politica</h2>
+        <ul>
+        <li><a href="politica.html">Privacy Politcs</a></li>  
+        </ul>
+      </div>
+      <div class="sec contact">
+        <h2>Contacto</h2>
+        <ul class="info">
+          <li>
+            <span>
+              <i class='bx bxs-phone'></i>
+            </span>
+            <p>
+              <a href="€">
+                +351 981 239 235
+              </a>
+            </p>
+          </li>
+          <li>
+          <span>
+            <i class='bx bx-envelope'></i>
+          </span>
+          <p>
+            <a href="gmail.com">
+              thehotel@gmail.com
+            </a>
+          </p>
+        </li>  
+        </ul>
+      </div>
+      </div>
+</footer>
+
+<div class="copyright">
+<p>Copyright ©2024 THE HOTEL. All Rights Reserved. </p>
+</div>
+
+  <script>
+   // Seleciona todas as perguntas
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+
+  question.addEventListener('click', () => {
+    item.classList.toggle('active'); // Ativa a classe para expandir/colapsar
+
+    // Fecha os outros itens quando um é aberto
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+  });
+});
+
+
+  </script>    
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE HOTEL</title>
+  <link rel="stylesheet" href="style.css">   
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <style>
+   
+    
+    .container {
+      max-width: 1000px;
+      width: 90%;
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px; /* Ajuste para centralizar melhor */
+    }
+    
+    .room-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .room-image img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    
+    .booking-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+    }
+    
+    .room-details {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    h1, h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    
+    .price-info {
+      font-size: 22px;
+      font-weight: bold;
+      color: #d9534f;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      width: 100%;
+    }
+    
+    .form-group label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+    
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    
+    .btn.reserve-btn {
+      width: 100%;
+      padding: 14px;
+      background: #d9534f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      font-size: 16px;
+    }
+    
+    .btn.reserve-btn:hover {
+      background: #c9302c;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+ <nav class="nav" id="nav"> 
+  <a href="index.html" class="nav__logo">The Hotel</a>
+  <ul class="nav__list">
+    <li class="nav__item"><a href="index.html" class="nav__link active-link">Início</a></li>
+    <li class="nav__item"><a href="produtos.html" class="nav__link">Quartos</a></li>
+    <li class="nav__item"><a href="projetos.html" class="nav__link">Projetos</a></li>
+    <li class="nav__item"><a href="contato.html" class="nav__link">Contato</a></li>
+    <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre Nós</a></li>
+    <li class="nav__item"><a href="login.html" class="nav__link"><i class='bx bx-user-circle nav__link_icon'></i></a></li>
+    <li class="nav__item"><i class='bx bx-cart-alt nav__link_icon'></i> <span class="cart__badge">3</span></li>
+  </ul>     
+ </nav>
+
+<div class="container">
+  <div class="room-image">
+    <img id="quarto-imagem" src="" alt="Imagem do Quarto">
+  </div>
+
+  <div class="booking-section">
+    <div class="room-details">
+      <h1 id="quarto-nome">Carregando...</h1>
+      <p id="quarto-descricao"></p>
+    </div>
+
+    <div class="booking-content">
+      <h2>Reserve Este Quarto</h2>
+      <div class="price-info">
+        <span class="price" id="quarto-preco">€...</span>
+        <small>por noite</small>
+      </div>
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="checkin-date">Data de Check-in:</label>
+          <input type="date" id="checkin-date" required />
+        </div>
+        <div class="form-group">
+          <label for="checkout-date">Data de Check-out:</label>
+          <input type="date" id="checkout-date" required />
+        </div>
+        <div class="form-group">
+          <label for="guests">Número de Hóspedes:</label>
+          <select id="guests">
+            <option value="1">1 Hóspede</option>
+            <option value="2">2 Hóspedes</option>
+            <option value="3">3 Hóspedes</option>
+            <option value="4">4 Hóspedes</option>
+          </select>
+        </div>
+        <button type="button" class="btn reserve-btn" id="adicionarAoCarrinho">Reservar Agora</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById("adicionarAoCarrinho").addEventListener("click", function() {
+      // Obter os detalhes do quarto da página
+      let quarto = {
+          nome: document.getElementById("quarto-nome").textContent,
+          descricao: document.getElementById("quarto-descricao").textContent,
+          preco: parseFloat(document.getElementById("quarto-preco").textContent.replace("€", "").trim()),
+          imagem: document.getElementById("quarto-imagem").src
+      };
+
+      // Obter o carrinho do LocalStorage (se existir)
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+      // Adicionar o quarto ao carrinho
+      carrinho.push(quarto);
+
+      // Guardar o carrinho atualizado no LocalStorage
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+      // Mensagem de sucesso
+      alert("Quarto adicionado ao carrinho!");
+
+      // Redirecionar para o carrinho
+      window.location.href = "carrinho.html";
+  });
+</script>
+
+
+<script src="product-single.js"></script>
+</body>
+</html>

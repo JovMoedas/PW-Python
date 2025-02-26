@@ -1,0 +1,250 @@
+<DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="style.css">    
+        <!-- Favicon -->
+        <link rel="icon" href="quarto1.jpg" type="icon">
+        
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <title>THE HOTEL</title>
+    </head>
+  <style>
+
+
+header {
+  text-align: center;
+  background-color: #181818;
+  color: white;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Container principal */
+.checkout-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção esquerda */
+.checkout-left {
+  width: 60%;
+  padding: 30px;
+  border-right: 2px solid #e6e6e6;
+  background-color: #f9f9f9;
+}
+
+.checkout-left h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.paypal-btn {
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.paypal-btn:hover {
+  background-color: #005a99;
+  transform: scale(1.03);
+}
+
+/* Passos */
+.step, .step1 {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  margin-top: 10px;
+}
+
+.email-input:focus {
+  border-color: #0070ba;
+  outline: none;
+}
+
+/* Seção direita */
+.checkout-right {
+  width: 40%;
+  padding: 30px;
+}
+
+.checkout-right h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-img {
+  width: 120px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #e6e6e6;
+}
+
+.cart-item p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.summary p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.save-info {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #666;
+}
+
+.password-input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+.password-input:focus {
+  border-color: #0070ba;
+  outline: none;
+}
+
+/* Botões */
+.place-order-btn {
+  display: block;
+  width: 100%;
+  background-color: #2c3855;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.place-order-btn:hover {
+  background-color: #1a2535;
+  transform: scale(1.03);
+}
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  <div class="checkout-container">
+    <div class="checkout-left">
+      <button class="paypal-btn" > <i class='bx bxl-paypal'></i>PayPal</button>
+      <div class="step">
+        <h2> <i class='bx bx-envelope'></i> Email</h2>
+        <p>Novos clientes podem receber <strong>10% off</strong> de desconto na primeira reserva. Já tem uma conta? </p>
+        <input type="email" placeholder="Email" class="email-input">
+      </div>
+      <div class="step1">
+        <h2><i class='bx bx-user'></i> Dados Pessoais</h2>
+      </div>
+      <div class="step1">
+        <h2><i class='bx bx-credit-card' ></i> Pagamento</h2>
+      </div>
+    </div>
+    <div class="checkout-right">
+      <h3>Carrinho (2)</h3>
+      <div class="cart-item">
+        <img src="assets/img/room-1.jpg" alt="Product Image" class="product-img">
+        <div>
+          <p>Suíte Royal</p>
+          <p>Luxo sem igual com serviço exclusivo.</p>
+          <p>650,00 €</p>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="assets/img/quarto1.jpg" alt="Product Image" class="product-img">
+        <div>
+          <p>Suíte Vista Mar</p>
+          <p>Uma experiência luxuosa com vista para o mar.</p>
+          <p>450,00 €</p>
+        </div>
+      </div>
+      <div class="summary">
+        <p style="font-size: 20px;"><strong>Total: 1100,00 €</strong></p>
+      </div>
+      <div class="save-info">
+        <p>Salve as suas informações (opcional)</p>
+        <input type="password" placeholder="Escolha a senha (deve ter 8 caracteres)" class="password-input">
+      </div>
+      <button class="place-order-btn" id="Reservar">Reservar</button>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
+
+<script>
+
+  document.getElementById("Reservar").addEventListener("click", function() {
+      window.location.href = "index.html";
+      
+  });
+  </script>

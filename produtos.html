@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/img/quarto1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>THE HOTEL</title>
+</head>
+<body>
+
+    <!--=============== HEADER ===============-->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav__logo">The Hotel</a>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link active-link">Início</a></li>
+            <li class="nav__item"><a href="quartos.html" class="nav__link">Quartos</a></li>
+            <li class="nav__item"><a href="projetos.html" class="nav__link">Projetos</a></li>
+            <li class="nav__item"><a href="contato.html" class="nav__link">Contato</a></li>
+            <li class="nav__item"><a href="sobrenos.html" class="nav__link">Sobre Nós</a></li>
+            <li class="nav__item"><a href="login.html" class="nav__link"><i class='bx bx-user-circle nav__link_icon'></i></a></li>
+            <li class="nav__item"><i class='bx bx-cart-alt nav__link_icon'></i><span class="cart__badge">3</span></li>
+        </ul>
+    </nav>
+
+    <!--=============== LISTAGEM DE QUARTOS DINÂMICA ===============-->
+    <div class="container-quartos">
+        <div class="list-container">
+            <div class="left-col">
+                <p id="total-quartos">Carregando...</p>
+                <h1>Quartos Disponíveis</h1>
+                <div id="quartos-container"></div> <!-- Quartos serão carregados aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="quartos.js"></script> <!-- Script para carregar os quartos -->
+</body>
+</html>

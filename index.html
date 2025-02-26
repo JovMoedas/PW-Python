@@ -1,0 +1,441 @@
+
+<DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="style.css">    
+      <!-- Favicon -->
+      <link rel="icon" href="quarto1.jpg" type="icon">
+      
+      <!--=============== BOXICONS ===============-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+      
+
+      <title>THE HOTEL</title>
+  </head>
+  <body>
+       <!--=============== NAVBAR ===============-->
+          <nav class="nav" id="nav"> 
+              <a href="index.html" class="nav__logo">
+               The Hotel
+              </a>
+            <ul class="nav__list">
+      
+              <li class="nav__item">
+                <a href="index.html" class="nav__link active-link">Início</a>
+              </li>
+      
+              <li class="nav__item">
+                <a href="produtos.html" class="nav__link">Quartos</a>
+              </li>
+      
+              <li class="nav__item">
+                <a href="projetos.html" class="nav__link">Projetos</a>
+              </li>
+      
+              <li class="nav__item">
+                  <a href="contato.html" class="nav__link">Contato</a>
+              </li>
+      
+              <li class="nav__item">
+                  <a href="sobrenos.html" class="nav__link">Sobre Nós</a>
+              </li>
+              <li class="nav__item">
+                <a href="login.html" class="nav__link">
+                  <i class='bx bx-user-circle nav__link_icon'></i>
+                </a>
+              </li>
+              
+              <li class="nav__item">
+                <a href="carrinho.html" class="nav__link">
+                  <i class='bx bx-cart-alt nav__link_icon'></i>
+                  <span class="cart__badge">3</span>
+                </a>
+              </li>              
+            </ul>     
+          </div>
+          </nav>
+   <main>
+    <!--=============== BOOKING ==============-->
+      <br>  <br> 
+      <header class="section__container header__container">
+          <div class="header__image__container">
+            <div class="header__content">
+              <h1>As Melhores Ferias</h1>
+              <p>Faça seu check in AGORA</p>
+            </div>
+            <div class="booking__container">
+              <form>
+                <div class="form__group">
+                  <div class="input__group">
+                    <input type="text" placeholder="-"/>
+                    <label>Localidade</label>
+                  </div>
+                  <p>Para onde vai ficar</p>
+                </div>
+                <div class="form__group">
+                  <div class="input__group">
+                    <input type="date"  />
+                    <label>Check In</label>
+                  </div>
+                  <p>Data</p>
+                </div>
+                <div class="form__group">
+                  <div class="input__group">
+                    <input type="date" />
+                    <label>Check Out</label>
+                  </div>
+                  <p>Data</p>
+                </div>
+                <div class="form__group">
+                  <div class="input__group">
+                    <input type="number"  placeholder="-"/>
+                    <label>Pessoas</label>
+                  </div>
+                  <p>Adicione as Pessoas</p>
+                </div>
+              </form>
+              <button class="btn"><i class='bx bx-bookmark-plus'></i></button>
+            </div>
+          </div>
+        </header>
+  
+    <br> <br> <br> <br> <br> <br>
+            <!--=============== BEM VINDO / ABOUT US ===============-->
+  
+    <section class="about top">
+      <div class="container flex">
+        <div class="left">
+          <div class="heading">
+            <h1>BEM VINDO</h1>
+            <h2>THE HOTEL</h2>
+          </div>
+          <p>No coração de Lisboa, o The Hotel oferece o equilíbrio perfeito entre o charme lisboeta e o conforto moderno. Com fácil acesso aos principais pontos turísticos, o hotel é o ponto de partida ideal para explorar a cidade e suas vistas deslumbrantes. Relaxe em nossas acomodações elegantes, experimente o melhor da gastronomia local e deixe-se envolver pelo serviço dedicado que torna sua estadia inesquecível.</p>
+          <br>
+          <button class="primary-btn">Sobre Nós
+          </button>
+        </div>
+        <div class="right">
+          <img src="assets/img/about.png" alt="">
+        </div>
+      </div>
+    </section>
+  <br><br> <br>  
+  
+          <!--=============== QUARTOS / ROOMS ===============-->
+     
+    <section class="section__container rooms__container">
+      <h2 class="section__header">Nossos Quartos</h2>
+      <div class="rooms__grid">
+        <div class="rooms__card">
+          <img src="assets/img/quarto1.jpg" alt="rooms hotel" /> 
+          <div class="rooms__content">
+            <div class="rooms__card__header">
+              <h4>Suíte Encanto do Mar </h4>
+              <h4>450,00 €</h4>
+            </div>
+            <div class="star-rating">
+              <!-- Estrelas de avaliação (5 estrelas) -->
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>  
+              <i class='bx bx-star'></i>
+            </div>
+            
+            <p> <i class='bx bx-location-plus'></i> Lisboa , POR</p>
+            <button class="booking__button">Book Now
+              <i class='bx bx-cart-add cart-icon'></i>
+            </button>
+          </div>
+        </div>
+        <div class="rooms__card">
+          <img src="assets/img/room-1.jpg" alt="rooms hotel" />
+          <div class="rooms__content">
+            <div class="rooms__card__header">
+              <h4>Quarto Luxo Jardim Secreto</h4>
+              <h4>380,00 €</h4>
+            </div>
+            <div class="star-rating">
+              <!-- Estrelas de avaliação (5 estrelas) -->
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>  
+            </div>
+            <p> <i class='bx bx-location-plus'></i> Lisboa , POR</p>
+            <button class="booking__button">Book Now
+              <i class='bx bx-cart-add cart-icon'></i>
+            </button>
+          </div>
+        </div>
+        <div class="rooms__card">
+          <img src="assets/img/quarto3.jpg" alt="rooms hotel" />
+          <div class="rooms__content">
+            <div class="rooms__card__header">
+              <h4>Suíte Céu Estrelado</h4>
+              <h4>550,00 €</h4>
+            </div>
+            <div class="star-rating">
+              <!-- Estrelas de avaliação (5 estrelas) -->
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>  
+            </div>
+            <p><i class='bx bx-location-plus'></i> Albufeira , POR</p>
+            <button class="booking__button">Book Now
+              <i class='bx bx-cart-add cart-icon'></i>
+            </button>
+            </div>
+        </div>
+        <div class="rooms__card">
+          <img src="assets/img/room-1.jpg" alt="rooms hotel" />
+          <div class="rooms__content">
+            <div class="rooms__card__header">
+              <h4>Quarto Conforto Montanha</h4>
+              <h4>320,00 €</h4>
+            </div>
+            <div class="star-rating">
+              <!-- Estrelas de avaliação (5 estrelas) -->
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>  
+            </div>
+            <p> <i class='bx bx-location-plus'></i> Lisboa , POR</p>
+            <button class="booking__button">Book Now
+              <i class='bx bx-cart-add cart-icon'></i>
+            </button>          
+          </div>
+        </div>
+        <div class="rooms__card">
+          <img src="assets/img/quarto4.jpg" alt="rooms hotel" />
+          <div class="rooms__content">
+            <div class="rooms__card__header">
+              <h4>Suíte Terraço do Sol</h4>
+              <h4>600,00 €</h4>
+            </div>
+            <div class="star-rating">
+              <!-- Estrelas de avaliação (5 estrelas) -->
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>  
+              <i class='bx bx-star'></i>
+            </div>
+            <p><i class='bx bx-location-plus'></i> Porto , POR</p>
+            <button class="booking__button">Book Now
+              <i class='bx bx-cart-add cart-icon'></i>
+            </button>          
+          </div>
+        </div>
+        <div class="rooms__card">
+          <img src="assets/img/quarto1.jpg" alt="rooms hotel" />
+          <div class="rooms__content">
+            <div class="rooms__card__header">
+              <h4>Quarto Pôr do Sol Dourado</h4>
+              <h4>400,00 €</h4>
+            </div>
+            <div class="star-rating">
+              <!-- Estrelas de avaliação (5 estrelas) -->
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>  
+            </div>
+            <p> <i class='bx bx-location-plus'></i> Cascais , POR</p>
+            <button class="booking__button">
+              Book Now
+              <i class='bx bx-cart-add cart-icon'></i>
+            </button>         
+           </div>
+        </div>
+      </div>
+      <br>
+  </section>
+  
+              <!--=============== REVIEWS ===============-->
+  
+  <div class="section_review">
+  <div class="heading_review"><b> Nossas </b> Reviews </div>
+  <div class="wrapper">
+    <!--=============== PESSOA 1 ===============-->
+    <div class="container_review">
+      <div class="profile">
+        <div class="ImgBox">
+          <img src="assets/img/pessoa1.jpg">
+        </div>
+        <h2>Pessoa 1</h2>
+      </div>
+      <p> 
+        <span><i class='bx bxs-quote-left left'></i> </span>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Veniam harum ipsam accusantium culpa nisi reprehenderit expedita quidem incidunt architecto. 
+        Temporibus pariatur eius ex tempora libero et hic deleniti quaerat accusamus!
+        <span> <i class='bx bxs-quote-right right'></i> </span>
+      </p>
+      <div class="social">
+        <i class='bx bxl-instagram'></i>
+        <i class='bx bxl-facebook'></i>
+        <i class='bx bxl-youtube'></i>
+      </div>
+    </div>
+  <!--=============== PESSOA 2 ===============-->
+    <div class="container_review">
+      <div class="profile">
+        <div class="ImgBox">
+          <img src="assets/img/pessoa2.jpg">
+        </div>
+        <h2>Pessoa 2</h2>
+      </div>
+      <p> 
+        <span><i class='bx bxs-quote-left left'></i> </span>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Veniam harum ipsam accusantium culpa nisi reprehenderit expedita quidem incidunt architecto. 
+        Temporibus pariatur eius ex tempora libero et hic deleniti quaerat accusamus!
+        <span> <i class='bx bxs-quote-right right'></i> </span>
+      </p>
+      <div class="social">
+        <i class='bx bxl-instagram'></i>
+        <i class='bx bxl-facebook'></i>
+        <i class='bx bxl-youtube'></i>
+      </div>
+    </div>
+  <!--=============== PESSOA 3 ===============-->
+    <div class="container_review">
+      <div class="profile">
+        <div class="ImgBox">
+          <img src="assets/img/pessoa3.jpg">
+        </div>
+        <h2>Pessoa 3</h2>
+      </div>
+      <p> 
+        <span><i class='bx bxs-quote-left left'></i> </span>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Veniam harum ipsam accusantium culpa nisi reprehenderit expedita quidem incidunt architecto. 
+        Temporibus pariatur eius ex tempora libero et hic deleniti quaerat accusamus!
+        <span> <i class='bx bxs-quote-right right'></i> </span>
+      </p>
+      <div class="social">
+        <i class='bx bxl-instagram'></i>
+        <i class='bx bxl-facebook'></i>
+        <i class='bx bxl-youtube'></i>
+      </div>
+    </div>
+  </div>
+  </div>
+  </main>
+  
+              <!--=============== FOOTER ===============-->
+  
+          <footer>
+                <div class="container">
+                <div class="aboutus" >
+                  <h2>the hotel</h2>
+                  <br>
+                  <p>intro sobre o hotel oara colocar no footer e bla bla pq isto é o trabalho da cadeira </p>
+                  <ul class="sci" >
+                    <li>
+                      <a href="#"><i class='bx bxl-instagram'></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class='bx bxl-discord-alt'></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec quicklinks">
+                  <h2>Suporte</h2>
+                  <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="@">Ajuda</a></li>
+                    <li><a href="@">Duvidas</a></li>
+                  </ul>
+                </div>
+                <div class="sec quicklinks">
+                  <h2>Politica</h2>
+                  <ul>
+                  <li><a href="politica.html">Privacy Politcs</a></li>  
+                  </ul>
+                </div>
+                <div class="sec contact">
+                  <h2>Contacto</h2>
+                  <ul class="info">
+                    <li>
+                      <span>
+                        <i class='bx bxs-phone'></i>
+                      </span>
+                      <p>
+                        <a href="€">
+                          +351 981 239 235
+                        </a>
+                      </p>
+                    </li>
+                    <li>
+                    <span>
+                      <i class='bx bx-envelope'></i>
+                    </span>
+                    <p>
+                      <a href="gmail.com">
+                        thehotel@gmail.com
+                      </a>
+                    </p>
+                  </li>  
+                  </ul>
+                </div>
+                </div>
+          </footer>
+
+  <div class="copyright">
+    <p>Copyright ©2024 THE HOTEL. All Rights Reserved. </p>
+  </div>
+  
+     <!--=============== SCROLL UP ===============-->
+     <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+  </a>
+  
+  
+  
+<script>
+    function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+
+    // Mostrar o botão ao rolar 200px para baixo
+    if (window.scrollY >= 200) {
+        scrollUp.classList.add('show-scroll');
+    } else {
+        scrollUp.classList.remove('show-scroll');
+    }
+}
+
+// Adiciona o evento de rolagem
+window.addEventListener('scroll', scrollUp);
+
+// Função de rolagem suave ao clicar
+document.getElementById('scroll-up').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Movimento suave
+    });
+});
+
+
+
+  </script>
+  
+  
+  </body>
+  </html>

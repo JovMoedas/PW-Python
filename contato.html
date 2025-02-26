@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">    
+    <script src="main.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="quarto1.jpg" type="icon">
+    
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Projeto PW I</title>
+</head>
+<style>
+  
+.parent {
+  max-width: 85vw; /* Define uma largura máxima baseada na largura da janela */
+    width: 100%;
+    max-height: 95vh; /* Define uma altura máxima baseada na altura da janela */
+    margin: 25px auto; /* Centraliza o card horizontalmente */
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    background-color: #333;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza verticalmente */
+
+}
+    
+.div5 {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+iframe{
+ 
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.separador{
+
+border: none;
+height: 2px;
+background-color: #181818;
+margin: 1rem auto;
+width: 80%;
+}
+
+h1{
+  font-size: 30px;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.form {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 35px;
+  width: 300px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  
+}
+
+.form .title {
+  color: #cdbba9;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+}
+
+.form textarea {
+  border-radius: 8px;
+  height: 100px;
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid rgb(219, 213, 213);
+}
+
+.form button {
+  align-self: flex-end;
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #cdbba9;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-left: 15px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #cdbba9;
+    ;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #cdbba9;
+}
+
+.contact-item p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+    
+        
+</style>
+<body>
+    <!--=============== HEADER ===============-->
+    <nav class="nav" id="nav"> 
+      <a href="index.html" class="nav__logo">
+       The Hotel
+      </a>
+    <ul class="nav__list">
+
+      <li class="nav__item">
+        <a href="index.html" class="nav__link active-link">Início</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="produtos.html" class="nav__link">Quartos</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="projetos.html" class="nav__link">Projetos</a>
+      </li>
+
+      <li class="nav__item">
+          <a href="contato.html" class="nav__link">Contato</a>
+      </li>
+
+      <li class="nav__item">
+          <a href="sobrenos.html" class="nav__link">Sobre Nós</a>
+      </li>
+      <li class="nav__item">
+        <a href="login.html" class="nav__link">
+          <i class='bx bx-user-circle nav__link_icon'></i>
+        </a>
+      </li>
+      
+      <li class="nav__item">
+        <i class='bx bx-cart-alt nav__link_icon'></i> 
+        <span class="cart__badge">3</span>  
+      </li>
+      
+    </ul>     
+  </div>
+  </nav>
+
+
+    
+    <div class="title_Contactos">
+      <h1>Contacto</h1>
+      <hr class = "separador">
+  </div>
+ 
+    
+  <div class="parent">
+    <div class="div5">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385.3149670278517!2d-9.237205708255257!3d38.73299284250353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecc591ee3cf91%3A0xbef5b5c7ff4ca25!2sR.%20Luísa%20Neto%20Jorge%2020%2C%20Carnaxide!5e0!3m2!1spt-PT!2spt!4v1704319252552!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form class="form">
+        <div class="title">Contacto</div>
+        <input type="text" placeholder="Nome" class="input">
+        <input type="text" placeholder="Email" class="input">
+        <textarea placeholder="Menssagem"></textarea>
+        <button>Envie</button>
+      </form>
+          <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Endereço</h3>
+                <p>R. Luísa Neto Jorge<br>Carnaxide 20</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Telefone</h3>
+                <p>+351 981 234 235<br>+351 926 455 792</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>thehotel@gmail.com<br>thehotelportugal@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    
+
+
+
+          <!--=============== FOOTER ===============-->
+  
+          <footer>
+            <div class="container">
+            <div class="aboutus" >
+              <h2>the hotel</h2>
+              <br>
+              <p>intro sobre o hotel oara colocar no footer e bla bla pq isto é o trabalho da cadeira ez</p>
+              <ul class="sci" >
+                <li>
+                  <a href="#"><i class='bx bxl-instagram'></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class='bx bxl-youtube'></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class='bx bxl-discord-alt'></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="sec quicklinks">
+              <h2>Suporte</h2>
+              <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="@">Ajuda</a></li>
+                <li><a href="@">Duvidas</a></li>
+              </ul>
+            </div>
+            <div class="sec quicklinks">
+              <h2>Politica</h2>
+              <ul>
+              <li><a href="politica.html">Privacy Politcs</a></li>  
+              </ul>
+            </div>
+            <div class="sec contact">
+              <h2>Contacto</h2>
+              <ul class="info">
+                <li>
+                  <span>
+                    <i class='bx bxs-phone'></i>
+                  </span>
+                  <p>
+                    <a href="€">
+                      +351 981 239 235
+                    </a>
+                  </p>
+                </li>
+                <li>
+                <span>
+                  <i class='bx bx-envelope'></i>
+                </span>
+                <p>
+                  <a href="gmail.com">
+                    thehotel@gmail.com
+                  </a>
+                </p>
+              </li>  
+              </ul>
+            </div>
+            </div>
+      </footer>
+
+<div class="copyright">
+<p style="color: white;">Copyright ©2024 THE HOTEL. All Rights Reserved. </p>
+</div>
+</body>
+</html>
